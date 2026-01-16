@@ -1,4 +1,4 @@
-name: Build the Twine game
+name: The Night Market
 
 permissions:
   contents: write
@@ -26,18 +26,18 @@ jobs:
 
       - name: Set game configuration
         env:
-          APP_NAME: My Twine game
-          DESCRIPTION: My Twine game description
+          APP_NAME: The Night Market
+          DESCRIPTION: Welcome to the Night Market. Survive your journey while navigating a foreign land, rife with political intrigue, arbitrary rules and secrets designed to keep you distracted. Fall in love, explore a world with rich characters, and try to save the realm.
 
           # This must be of the format "N.N.N", where the N's are all numbers
           VERSION: 1.0.0
 
           # By default, the author will be your name on GitHub. You can manually change this.
-          AUTHOR: ${{ github.repository_owner }}
+          AUTHOR: Zinnia Demitasse
 
           # If this to 'true', a copy of your game will also be hosted on the web at https://USERNAME.github.io/REPO_NAME
           # Delete or comment out this line to disable that
-          PUBLISH_ON_WEB: true
+          
         run: |
           echo "APP_NAME=${APP_NAME}" >> $GITHUB_ENV
           echo "DESCRIPTION=${DESCRIPTION}" >> $GITHUB_ENV
